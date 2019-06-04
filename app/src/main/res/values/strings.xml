@@ -2,5 +2,5 @@
     <string name="app_name">My Vote</string>
     <string name="btn1_label">赞成</string>
     <string name="btn2_label">反对</string>
-    <string name="btn3_label">弃票</string>
+    <string name="btn3_label">弃权</string>
 </resources>

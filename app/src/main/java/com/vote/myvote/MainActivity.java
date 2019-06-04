@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 new VoteTask().execute("反对");
                 break;
             case R.id.button3:
-                new VoteTask().execute("弃票");
+                new VoteTask().execute("弃权");
                 break;
         }
     }
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             StringBuffer stringBuffer = new StringBuffer();        //存储封装好的请求体信息
             stringBuffer.append("r=").append(URLEncoder.encode(voteStr, "utf-8"));
             byte[] data = stringBuffer.toString().getBytes();
-            String urlPath = "http://10.240.13.35:8080/vote/vote.jsp/GetVote";
+            String urlPath = "http://10.32.186.145:8080/vote/GetVote"; //ip地址每次需要修改，其他不变
             URL url = new URL(urlPath);
             HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
             httpURLConnection.setConnectTimeout(3000);     //设置连接超时时间
